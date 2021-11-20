@@ -1,0 +1,11 @@
+{  
+    "User1": {  
+        "name":       "Alice",   
+        "salary":      56000 
+    }, 
+
+    "User2": {  
+        "name":       "John",   
+        "salary":      50000 
+    } 
+}

@@ -1,0 +1,59 @@
+   <!--Header-->
+   <%- include('partials/_header') -%>
+   <body>
+  
+   <!-- Navigation -->
+   <%- include('partials/_nav') -%>
+
+
+
+  <!-- Page Header -->
+  <header class="masthead" style="background-image: url('img/post-bg.jpg')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="post-heading">
+            <h1> <%= allp.title %> </h1>
+            <h2 class="subheading"><%= allp.detail.split(' ').slice(0,5) %></h2>
+            <span class="meta">Posted by
+              <a href="#">Start Bootstrap</a>
+              on <%= allp.dateCreated.toDateString() %></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Post Content -->
+  <article>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+             <%=allp.detail %>
+        </div>
+
+            <div class="col-xl-4 col-lg-5">
+            <div class="tm-bg-gray tm-share-box">
+            <div class="text-center">
+              <a href="/allposts/edit/<%= data._id %>" class="btn btn-primary" id="updateButton" >Update</a>
+            </div>
+            <div class="text-center">
+              <a href="/allposts/<%= data._id %>?_method=DELETE" onclick="return confirm('ARE YOU SURE?')" class="btn btn-primary" id="deleteButton">Delete</a>
+            </div>
+            </div>
+            </div>
+            
+        
+      </div>
+    </div>
+  </article>
+
+  <hr>
+
+  <!-- Footer -->
+  <%- include('partials/_footer') -%>
+
+</body>
+
+</html>
